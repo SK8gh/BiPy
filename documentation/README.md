@@ -5,9 +5,12 @@ At start, it can be complicated to use, especially due to the odd format of the 
 
 #### Format comparison
 <div align="center">
-  <img src="https://github.com/SK8gh/BiPy/blob/main/documentation/Binance%20request.png" width="400">
-  <img src="https://github.com/SK8gh/BiPy/blob/main/documentation/Wrapper%20request.png" width="400">
+  <img src="https://github.com/SK8gh/BiPy/blob/main/documentation/Binance%20request.png" width="600">
 </div>
+<div align="center">
+  <img src="https://github.com/SK8gh/BiPy/blob/main/documentation/Wrapper%20request.png" width="350">
+</div>
+
 This script implements the following components:
 
 - Binance wrapper: Returns the requested data in a clearer format.
