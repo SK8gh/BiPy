@@ -5,11 +5,11 @@
 ----------------------------
 Binance Wrapper testing file
 ----------------------------
+
 """
 
 from winance import BinanceWrapper
 from tests_configuration import *
-from datetime import datetime
 import pandas as pd
 import unittest
 import logging
@@ -65,8 +65,8 @@ class TestBinanceWrapper(unittest.TestCase):
         """
         try:
             data = self.bw.get_ticker_data(symbol='BTCUSDT',
-                                           start_time=pd.Timestamp(datetime(2023, 1, 1)),
-                                           end_time=pd.Timestamp(datetime(2023, 1, 2)),
+                                           start_time='2023-01-01',
+                                           end_time='2023-01-02',
                                            interval='1h')
         except Exception as e:
             logging.error('An error happened in the get_ticker_data method')

@@ -3,6 +3,7 @@
 from binance import Client
 import pandas as pd
 import logging
+import ast
 
 # Project configuration
 import configuration as conf
@@ -51,10 +52,6 @@ class BinanceWrapper:
         """
         Getting historical prices for given tickers, number of days, interval. Returns a pandas dataframe
         """
-        # Converting timestamps to strings
-        start_time, end_time = [str(t) if isinstance(t, pd.Timestamp) else None
-                                for t in [start_time, end_time]]
-
         # Checking that timestamps arguments had the right format before string conversion
         if start_time is None or end_time is None:
             raise ValueError("Both 'start_time' and 'end_time' arguments must have type pd.Timestamp")
@@ -78,10 +75,18 @@ class BinanceWrapper:
 
         return data
 
-    def get_data(self, symbols, start_time, end_time, interval):
+    def get_data(self, symbols, start_time, end_time, interval, gateway=False):
         """
         Requests products (one at a time)
         """
+        if gateway:
+            try:
+                symbols = ast.literal_eval(symbols)
+            except Exception as e:
+                msg = f"Could not convert the inputted symbols into a list (gateway call)"
+                logging.error(msg)
+                raise ValueError(f"{msg}: {str(e)}")
+
         if not isinstance(symbols, list):
             raise TypeError(f"'symbols argument must be a list but has type : {type(symbols)}'")
         elif interval not in conf.VALID_INTERVALS:
