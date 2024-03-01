@@ -1,4 +1,4 @@
-## Introduction
+## BiPy
 
 The Binance Python API can be complicated to use, especially due to the odd format of the returned object.
 
