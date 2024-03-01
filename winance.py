@@ -52,10 +52,6 @@ class BinanceWrapper:
         """
         Getting historical prices for given tickers, number of days, interval. Returns a pandas dataframe
         """
-        # Checking that timestamps arguments had the right format before string conversion
-        if start_time is None or end_time is None:
-            raise ValueError("Both 'start_time' and 'end_time' arguments must have type pd.Timestamp")
-
         try:
             # Sending request
             klines = self.client.get_historical_klines(symbol=symbol,
