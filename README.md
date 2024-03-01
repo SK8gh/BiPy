@@ -9,7 +9,7 @@ At start, it can be complicated to use, especially due to the odd format of the 
   <img src="https://github.com/SK8gh/BiPy/blob/main/images/Binance%20request.png" width="600">
 </div>
 
-##### Wrapper request format
+##### Wrapper request format (Pandas dataframe)
 <div align="left">
   <img src="https://github.com/SK8gh/BiPy/blob/main/images/Wrapper%20request.png" width="500">
 </div>
