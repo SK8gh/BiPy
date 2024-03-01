@@ -6,12 +6,12 @@ At start, it can be complicated to use, especially due to the odd format of the 
 ### Format comparison
 ##### Binance request format
 <div align="left">
-  <img src="https://github.com/SK8gh/BiPy/blob/main/documentation/Binance%20request.png" width="600">
+  <img src="https://github.com/SK8gh/BiPy/blob/main/images/Binance%20request.png" width="600">
 </div>
 
 ##### Wrapper request format
 <div align="left">
-  <img src="https://github.com/SK8gh/BiPy/blob/main/documentation/Wrapper%20request.png" width="500">
+  <img src="https://github.com/SK8gh/BiPy/blob/main/images/Wrapper%20request.png" width="500">
 </div>
 
 
